@@ -29,10 +29,42 @@ public class Pallindrone {
        return true;
     }
 
+    //reverse strings 
+
+    public static void reverseStrings(String phrase){
+        char[] myChar = phrase.toCharArray();
+
+        System.out.println("Character array: " + myChar);
+        int n = myChar.length;
+        System.out.println("leghnt of array: " + n);
+        int left = 0;
+        int right = n - 1;
+
+        while (left < right) {
+            
+            char temp = myChar[right];
+            myChar[right] = myChar[left];
+            myChar[left] = temp;
+
+            left++;
+            right--;
+
+            
+        }
+        myChar.toString();
+        System.out.println(myChar);
+
+    }    
     public static void main(String[] args) {
-        String str = "madam";
-        System.out.println(isPallindrone("Adam"));
+        String str = "hello";
+        
+        System.out.println(isPallindrone("Adam0"));
+
+        reverseStrings(str);
         
     }
 
+
+
+  
 }
